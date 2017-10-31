@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context="com.example.zaki.smarttubbles.RegisterActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="184dp"
+        android:background="#00695C"
+        android:text="Register"
+        android:textColor="#FFF"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:id="@+id/editext_email"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edittext_username"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="monospace"
+        android:hint="Email"
+        android:inputType="textCapWords"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edittext_password"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edittext_username"
+        android:fontFamily="monospace"
+        android:hint="Password"
+        android:inputType="textCapWords"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edittext_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edittext_password"
+        android:layout_alignStart="@+id/edittext_password"
+        android:layout_below="@+id/editext_email"
+        android:fontFamily="monospace"
+        android:hint="Username"
+        android:inputType="textCapWords"
+        android:textSize="30sp" />
+</RelativeLayout>
