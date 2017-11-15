@@ -18,7 +18,7 @@
         android:background="#E0E0E0">
 
         <EditText
-            android:id="@+id/edittext_username"
+            android:id="@+id/txt_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
@@ -28,7 +28,7 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/edittext_password"
+            android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
@@ -38,11 +38,11 @@
             android:textSize="25sp" />
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:onClick="loginMasuk"
             android:text="LOGIN"
             android:layout_margin="10dp"
             android:background="#00695C"
@@ -69,7 +69,7 @@
             android:textColor="#fff"/>
 
         <TextView
-            android:id="@+id/textDaftar"
+            android:id="@+id/txtDaftar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/textnoAkun"

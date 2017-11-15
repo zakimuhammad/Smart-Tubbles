@@ -74,7 +74,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/usename"
+                    android:id="@+id/username"
                     android:text="Username"
                     android:textSize="20sp"
                     android:textColor="#fff"/>
@@ -180,6 +180,14 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimary"
+            android:text="Logout" />
     </RelativeLayout>
 
 </ScrollView>
