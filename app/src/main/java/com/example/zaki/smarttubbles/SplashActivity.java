@@ -21,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
 
-        tvSplash = (TextView) findViewById(R.id.tvSplash);
+        tvSplash = findViewById(R.id.tvSplash);
 
         new Handler().postDelayed(new Runnable() {
 
@@ -43,6 +43,6 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, splashInterval);
 
-    };
+    }
 
 }

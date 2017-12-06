@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ban"
+    android:background="@drawable/backgroud"
     tools:context="com.example.zaki.smarttubbles.RegisterActivity">
 
     <LinearLayout
@@ -13,14 +12,26 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_centerVertical="true"
         android:orientation="vertical"
         android:background="#E0E0E0">
 
         <EditText
-            android:id="@+id/edittext_email"
+            android:id="@+id/txt_nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nama Lengkap"
+            android:inputType="textCapWords"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:fontFamily="monospace"/>
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:hint="Email"
             android:inputType="textCapWords"
             android:layout_margin="10dp"
@@ -28,9 +39,10 @@
             android:fontFamily="monospace"/>
 
         <EditText
-            android:id="@+id/edittext_username"
+            android:id="@+id/txt_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:fontFamily="monospace"
             android:hint="Username"
             android:layout_margin="10dp"
@@ -38,20 +50,34 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/edittext_password"
+            android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:fontFamily="monospace"
             android:hint="Password"
+            android:inputType="textPassword"
             android:layout_margin="10dp"
-            android:inputType="textCapWords"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/txt_confirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:hint="Confirm Password"
+            android:layout_margin="10dp"
+            android:inputType="textPassword"
             android:textSize="25sp" />
 
         <Button
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_weight="1"
             android:text="REGISTER"
             android:layout_margin="10dp"
             android:background="#00695C"

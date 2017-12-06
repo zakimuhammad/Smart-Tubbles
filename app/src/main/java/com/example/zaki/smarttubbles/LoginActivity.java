@@ -45,12 +45,14 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG_MESSAGE = "message";
 
     public final static String TAG_USERNAME = "username";
+    public final static String TAG_EMAIL = "email";
+    public final static String TAG_NAMA = "nama";
 
     String tag_json_obj = "json_obj_req";
 
     SharedPreferences sharedpreferences;
     Boolean session = false;
-    String id, username;
+    String email, username, nama;
     public static final String my_shared_preferences = "my_shared_preferences";
     public static final String session_status = "session_status";
 
@@ -71,18 +73,22 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
 
-        btn_login = (Button) findViewById(R.id.btn_login);
-        txt_daftar = (TextView) findViewById(R.id.txtDaftar);
-        txt_username = (EditText) findViewById(R.id.txt_username);
-        txt_password = (EditText) findViewById(R.id.txt_password);
+        btn_login = findViewById(R.id.btn_login);
+        txt_daftar = findViewById(R.id.txtDaftar);
+        txt_username = findViewById(R.id.txt_username);
+        txt_password = findViewById(R.id.txt_password);
 
         // Cek session login jika TRUE maka langsung buka MainActivity
         sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
         session = sharedpreferences.getBoolean(session_status, false);
+        nama = sharedpreferences.getString(TAG_NAMA, null);
+        email = sharedpreferences.getString(TAG_EMAIL,null);
         username = sharedpreferences.getString(TAG_USERNAME, null);
 
         if (session) {
             Intent intent = new Intent(LoginActivity.this, SecondActivity.class);
+            intent.putExtra(TAG_NAMA, nama);
+            intent.putExtra(TAG_EMAIL, email);
             intent.putExtra(TAG_USERNAME, username);
             finish();
             startActivity(intent);
@@ -144,6 +150,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     // Check for error node in json
                     if (success == 1) {
+                        String nama = jObj.getString(TAG_NAMA);
+                        String email = jObj.getString(TAG_EMAIL);
                         String username = jObj.getString(TAG_USERNAME);
 
                         Log.e("Successfully Login!", jObj.toString());
@@ -153,11 +161,15 @@ public class LoginActivity extends AppCompatActivity {
                         // menyimpan login ke session
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putBoolean(session_status, true);
+                        editor.putString(TAG_NAMA, nama);
+                        editor.putString(TAG_EMAIL, email);
                         editor.putString(TAG_USERNAME, username);
                         editor.commit();
 
                         // Memanggil main activity
                         Intent intent = new Intent(LoginActivity.this, SecondActivity.class);
+                        intent.putExtra(TAG_NAMA, nama);
+                        intent.putExtra(TAG_EMAIL, email);
                         intent.putExtra(TAG_USERNAME, username);
                         finish();
                         startActivity(intent);

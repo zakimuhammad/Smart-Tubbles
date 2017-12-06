@@ -5,5 +5,5 @@ package com.example.zaki.smarttubbles;
  */
 
 public class Server {
-    public static final String url = "http://192.168.43.54/android/";
+    public static final String url = "http://192.168.43.54/Smart-Tubless/";
 }
